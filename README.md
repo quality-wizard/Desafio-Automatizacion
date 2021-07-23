@@ -9,12 +9,12 @@ cómo se ve y cómo extender el marco con bibliotecas de pruebas personalizadas.
 Tabla de Contenido
 ==================
 * [Descargar Paquete Desafío Automatización](#Descargar-Paquete-Desafío-Automatización)
-    * [Demo Aplicación](##Demo-Aplicación)
-    * [Casos De Prueba](##Casos-De-Prueba)
-    * [Librerías De Test](##Libreria-De-Test)
+    * [Demo Aplicación](#Demo-Aplicación)
+    * [Casos De Prueba](#Casos-De-Prueba)
+    * [Librerías De Test](#Librerías-De-Test)
 * [Iniciar Demo Desafío Automatización](#Iniciar-Demo-Desafío-Automatización)
-    * [Precondiciones](##Precondiciones)
-    * [Iniciar Tests](##Iniciar-Tests)
+    * [Precondiciones](#Precondiciones)
+    * [Iniciar Tests](#Iniciar-Tests)
     
 # Descargar Paquete Desafío Automatización
 Para obtener la demostración, puede `Descargar` y extraer el último 
@@ -25,7 +25,7 @@ Como resultado, obtiene el directorio ``DesafioAutomatizacion`` con varios archi
 La aplicación de demostración es una página con carrito de compra, con validaciones, 
 manejo de frames, tablas y escenarios implementada con Python y Robot Framework (`DesafioAutomatizacion.py`).
 
-## Casos de Prueba
+## Casos De Prueba
 La demostración contiene un archivo de casos de prueba y un archivo de suite de prueba, que ilustran dos
 enfoques para crear casos de prueba con Robot Framework. Haga clic en los nombres de archivo a continuación
 para ver las últimas versiones en línea.
@@ -42,7 +42,7 @@ para ver las últimas versiones en línea.
 
 Puedes ver [`Robot Framework User Guide`](http://robotframework.org/robotframework/#user-guide) para más detalles sobre la sintaxis del Framework.
 
-## Librerías de Test
+## Librerías De Test
 
 Todos los casos de prueba interactúan con la biblioteca de elementos llamada
 `WebElements.py`. En la práctica, la biblioteca es solo un diccionario de Python 
