@@ -2,9 +2,8 @@ Robot Framework Demo
 ====================
 
 [`Robot Framework`](https://robotframework.org). Es un marco genérico de automatización de pruebas de código abierto.
-Además de presentar la sintaxis de datos de prueba de Robot Framework, esta demostración
-muestra cómo ejecutar casos de prueba, cómo se generan informes y registros y
-cómo se ve y cómo extender el marco con bibliotecas de pruebas personalizadas.
+Además de presentar la sintaxis de Robot Framework, esta demostración
+muestra también cómo ejecutar casos de prueba y cómo se generan los informes y registros.
 
 Tabla de Contenido
 ==================
@@ -76,7 +75,7 @@ este proyecto de demostración es actualmente compatible con Python 3.
 Los casos de pruebas son ejecutados con el comando `robot`:
 
 
-    robot keyword_driven.robot
+    robot ("Nombre Archivo").robot
 
 Nota: Si está utilizando Robot Framework 2.9 o una versión anterior, debe
           use el comando específico del intérprete de Python `pybot`, `jybot` o
@@ -89,7 +88,7 @@ un argumento y usar varias opciones de línea de comando compatibles con Robot F
 
 Los resultados `disponibles en línea` se crearon usando el siguiente comando:
 
-    robot --name Robot --loglevel DEBUG keyword_driven.robot data_driven.robot gherkin.robot
+    robot -d Results /Tests/TestCases.robot
 
 Ejecuta `robot --help` para mayor información sobre los comandos utilizados.
 [`Robot Framework User Guide`](http://robotframework.org/robotframework/#user-guide), para mayor información sobre ejecuciones de pruebas en general.
