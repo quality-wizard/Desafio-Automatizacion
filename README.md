@@ -29,12 +29,12 @@ La demostración contiene un archivo de casos de prueba y un archivo de suite de
 enfoques para crear casos de prueba con Robot Framework. Haga clic en los nombres de archivo a continuación
 para ver las últimas versiones en línea.
 
-`TestCases.robot`
+[`TestCases.robot`](https://github.com/MountainG-Dev/Desafio-Automatizacion/blob/master/Tests/TestCases.robot)
     Ejemplos de casos de prueba que utilizan el enfoque de prueba basado en validaciones.
 
     El estilo basado en validaciones funciona bien cuando necesita validar distintas validaciones por separado.
 
-`TestSuite.robot`
+[`TestSuite.robot`](https://github.com/MountainG-Dev/Desafio-Automatizacion/blob/master/TestSuite/TestSuite.robot)
     Ejemplos de casos de prueba que utilizan el enfoque de prueba basado en datos.
     
     El estilo basado en datos funciona bien cuando necesita repetir el mismo flujo de trabajo varias veces.
