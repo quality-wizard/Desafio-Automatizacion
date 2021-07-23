@@ -32,12 +32,12 @@ Seleccionar Talla y Color Vestido
 Continuar Con La Compra
     Wait Until Page Contains Element        ${ProductPageElementFrameCompra}
     Sleep                                   3
-    Click Element                           ${ProductPageElementContinuarCompra}
+    Click Element                           ${ProductPageButtonContinuarCompra}
 
 Ir a Carrito de Compras
     Wait Until Page Contains Element        ${ProductPageElementFrameCompra}
     Sleep                                   3
-    Click Element                           ${ProductPageElementIraCarritoCompra}
+    Click Element                           ${ProductPageButtonCarritoCompra}
 
     
 

@@ -29,8 +29,8 @@ HomePageButtonSignIn = "xpath://span[normalize-space()='Sign in']"
 ProductPageFrame = "xpath://body/div/div/div/div/div/iframe[1]"
 ProductPageElementCarrito = "xpath://span[normalize-space()='Add to cart']"
 ProductPageElementFrameCompra = "xpath://div[@class='clearfix']"
-ProductPageElementContinuarCompra = "xpath://span[@title='Continue shopping']"
-ProductPageElementIraCarritoCompra = "xpath://span[normalize-space()='Proceed to checkout']"
+ProductPageButtonContinuarCompra = "xpath://span[@title='Continue shopping']//span[1]"
+ProductPageButtonCarritoCompra = "xpath://span[normalize-space()='Proceed to checkout']"
 
 ProductPageElementBlusaColor1 = "xpath://a[@id='color_8']"
 ProductPageElementBlusaColor2 = "xpath://a[@id='color_11']"
@@ -47,6 +47,7 @@ ProductPageScreenshotProducto2 = "Evidencias/Producto-2.png"
 # Summary Page Locators
 SummaryPageScreenshotCarrito = "Evidencias/Productos-Carrito.png"
 SummaryPageTable = "xpath://table[@id='cart_summary']"
+SummaryPageTableVal1= "xpath://table[@id='cart_summary']/tfoot/tr[3]/td[1]"
 
 SummaryPageElementVal1 = "Blouse"
 SummaryPageElementVal2 = "Printed Summer Dress"

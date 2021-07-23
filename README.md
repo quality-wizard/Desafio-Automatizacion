@@ -22,7 +22,7 @@ Como resultado, obtiene el directorio `DesafioAutomatizacion` con varios archivo
 
 ## Demo Aplicación
 La aplicación de demostración es una página con carrito de compra, con validaciones, 
-manejo de frames, tablas y escenarios implementada con Python y Robot Framework [`DesafioAutomatizacion.py`](DesafioAutomatizacion.py).
+manejo de frames, tablas y escenarios implementada con Python y Robot Framework [`Run.bat`](Run.bat).
 
 ## Casos De Prueba
 La demostración contiene un archivo de casos de prueba y un archivo de suite de prueba, que ilustran dos

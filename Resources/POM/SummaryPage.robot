@@ -12,6 +12,8 @@ Validar Productos
     Table Should Contain           ${SummaryPageTable}     ${SummaryPageElementVal2}
 
 Validar Datos Footer
+    ${data}=    Get Text           ${SummaryPageTableVal1}
+    Log To Console                 ${data}
     Table Footer Should Contain    ${SummaryPageTable}        ${SummaryPageElementVal3}
     Table Footer Should Contain    ${SummaryPageTable}        ${SummaryPageElementVal4}
     Capture Page Screenshot        ${SummaryPageScreenshotCarrito}
