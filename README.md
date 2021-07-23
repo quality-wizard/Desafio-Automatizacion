@@ -59,7 +59,7 @@ todas las evidencias generadas en las validaciones.
 # Iniciar Demo Desafío Automatización
 ## Precondiciones
 
-Una precondición para ejecutar las pruebas es tener instalado `Robot Framework`. Es común utilizarlo con, pero también se puede utilizar con `Jython (JVM)` y `IronPython (.NET)`.
+Una precondición para ejecutar las pruebas es tener instalado `Robot Framework`. Es común utilizarlo con Python, pero también se puede utilizar con `Jython (JVM)` y `IronPython (.NET)`.
 
 Robot Framework [`installation instructions`](https://github.com/robotframework/robotframework/blob/master/INSTALL.rst), cubre el proceso completo de instalación en detalle.
 
@@ -67,7 +67,7 @@ Las personas que ya están familiarizadas con la instalación de paquetes de Pyt
 
     pip install robotframework
 
-Robot Framework 4.0 y versiones posteriores admiten Python 3 además de Python 2. También
+Robot Framework 3.0 y versiones posteriores admiten Python 3 además de Python 2. También
 este proyecto de demostración es actualmente compatible con Python 3.
 
 ## Iniciar Tests
