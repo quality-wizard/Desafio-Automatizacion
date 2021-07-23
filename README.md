@@ -44,7 +44,7 @@ Puedes ver [`Robot Framework User Guide`](http://robotframework.org/robotframewo
 ## Librerías De Test
 
 Todos los casos de prueba interactúan con la biblioteca de elementos llamada
-`WebElements.py`. En la práctica, la biblioteca es solo un diccionario de Python 
+[`WebElements.py`](https://github.com/MountainG-Dev/Desafio-Automatizacion/blob/master/Resources/WebElements.py). En la práctica, la biblioteca es solo un diccionario de Python 
 con localizadores utilizados por los casos de pruebas.
 
 ## Generación de Resultados
@@ -52,9 +52,9 @@ con localizadores utilizados por los casos de pruebas.
 Después de `Ejecutar Prubas`, obtendrá un reporte y un log en formato HTML. Además se generó un directorio para almacenar
 todas las evidencias generadas en las validaciones.
 
-- `report.html`
-- `log.html`
-- `Evidencias`
+- [`report.html`](https://github.com/MountainG-Dev/Desafio-Automatizacion/blob/master/Results/report.html)
+- [`log.html`](https://github.com/MountainG-Dev/Desafio-Automatizacion/blob/master/Results/log.html)
+- [`Evidencias`](https://github.com/MountainG-Dev/Desafio-Automatizacion/tree/master/Results/Evidencias)
 
 # Iniciar Demo Desafío Automatización
 ## Precondiciones
