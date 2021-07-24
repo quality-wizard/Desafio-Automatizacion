@@ -1,92 +1,104 @@
-Robot Framework Demo
+Automatización con Robot Framework
 ====================
 
 [`Robot Framework`](https://robotframework.org). Es un marco genérico de automatización de pruebas de código abierto.
-Además de presentar la sintaxis de Robot Framework, esta demostración
-muestra también cómo ejecutar casos de prueba y cómo se generan los informes y registros.
+
+Durante la siguiente demo se realizarán ejecuciones de casos de pruebas utilizando la sintaxis de Robot Framework y 
+además se verificarán las validaciones definidas como criterios de aceptación previamente.
+
 
 Tabla de Contenido
 ==================
-* [Descargar Paquete Desafío Automatización](#Descargar-Paquete-Desafío-Automatización)
-    * [Demo Aplicación](#Demo-Aplicación)
-    * [Casos De Prueba](#Casos-De-Prueba)
-    * [Librerías De Test](#Librerías-De-Test)
+* [Configuraciones](#Configuraciones)
+
+* [Scope de Automatización](#Scope-de-Automatización)
+    * [Estrategia de Automatización](#Estrategia-de-Automatización)
+    * [Librerías de Test](#Librerías-de-Test)
+    * [Casos de Prueba](#Casos-De-Prueba)
 * [Iniciar Demo Desafío Automatización](#Iniciar-Demo-Desafío-Automatización)
     * [Precondiciones](#Precondiciones)
-    * [Iniciar Tests](#Iniciar-Tests)
+    * [Iniciar Ejecuciones de Tests con Archivo .bat](#Iniciar-Ejecuciones-de-Tests-con-Archivo-.bat)
+    * [Iniciar Ejecuciones de Tests por Comando](#Iniciar-Ejecuciones-de-Tests-por-Comando)      
+    * [Reporteria de Resultados](#Reporteria-de-Resultados)
     
-# Descargar Paquete Desafío Automatización
-Para obtener la demostración, puede `Descargar` y extraer el último 
-paquete de GitHub o, verifique él `Código Fuente` directamente.
-Como resultado, obtiene el directorio `DesafioAutomatizacion` con varios archivos.
+# Configuraciones
+Para obtener la demo, puede `Descargar` y extraer el último 
+paquete de GitHub o verificar él `Código Fuente` directamente.
+Como resultado obtendrá el directorio [`DesafioAutomatizacion`](/) con los archivos correspondientes.
 
-## Demo Aplicación
-La aplicación de demostración es una página con carrito de compra, con validaciones, 
-manejo de frames, tablas y escenarios, implementada con Python y Robot Framework [`RunTestSuite.bat`](RunTestSuite.bat).
+# Scope de Automatización
 
-## Casos De Prueba
-La demostración contiene un archivo de casos de prueba y un archivo de suite de prueba, que ilustran dos
-enfoques para crear casos de prueba con Robot Framework. Haga clic en los nombres de archivo a continuación
-para ver las últimas versiones en línea.
+## Estrategia de Automatización
+La demo contiene dos archivos que identifican dos enfoques. Uno tanto para crear y ejecutar casos de prueba con datos 
+estáticos y otro para crear y ejecutar suite de pruebas con datos dinámicos utilizando TDD.
 
 [`TestCases.robot`](Tests/TestCases.robot)
-    Ejemplos de casos de prueba que utilizan el enfoque de prueba basado en validaciones.
+    Crea y ejecuta casos de prueba con datos estáticos
 
-    El estilo basado en validaciones funciona bien cuando necesita validar distintas validaciones por separado.
+    El estilo basado en datos estaticos se puede utilizar durante la fase de construcción del script de automatización.
 
 [`TestSuite.robot`](TestSuite/TestSuite.robot)
-    Ejemplos de casos de prueba que utilizan el enfoque de prueba basado en datos.
+    Crea y ejecuta suite de pruebas con datos dinámicos utilizando TDD
     
-    El estilo basado en datos funciona bien cuando necesita repetir el mismo flujo de trabajo varias veces.
+    El estilo basado en datos dinámicos funciona bien cuando necesitas probar diferentes escenarios con datos de entrada configurables.
 
 Puedes ver [`Robot Framework User Guide`](http://robotframework.org/robotframework/#user-guide) para más detalles sobre la sintaxis del Framework.
 
-## Librerías De Test
-
+## Librerías de Test
 Todos los casos de prueba interactúan con la biblioteca de elementos llamada
-[`WebElements.py`](Resources/WebElements.py). En la práctica, la biblioteca es solo un diccionario de Python 
-con localizadores utilizados por los casos de pruebas.
+[`WebElements.py`](Resources/WebElements.py). En la práctica es una biblioteca de datos que contiene todos los localizadores utilizados en la automatización.
 
-## Generación de Resultados
-
-Después de `Ejecutar Prubas`, obtendrá un reporte y un log en formato HTML. Además se generó un directorio para almacenar
-todas las evidencias generadas en las validaciones.
-
-- [`report.html`](Results/report.html)
-- [`log.html`](Results/log.html)
-- [`Evidencias`](Results/Evidencias)
+## Casos De Prueba
+La demo contiene el archivo [`Users.xlsx`](/TDD/Users.xlsx) en donde se almacenan todas las variables de casos de prueba previamente
+planificadas.
 
 # Iniciar Demo Desafío Automatización
+
 ## Precondiciones
+Una precondición para la ejecución de las pruebas es tener instalado: `Robot Framework`, `Selenium Library` y `DataDriver Library`. 
 
-Una precondición para ejecutar las pruebas es tener instalado `Robot Framework`. Es común utilizarlo con Python, pero también se puede utilizar con `Jython (JVM)` y `IronPython (.NET)`.
+Se puede utilizar con `Python(Py)`, `Jython (JVM)` y `IronPython (.NET)`.
 
-Robot Framework [`installation instructions`](https://github.com/robotframework/robotframework/blob/master/INSTALL.rst), cubre el proceso completo de instalación en detalle.
+Las personas que ya están familiarizadas con la instalación de paquetes de Python y cuentan con el administrador de paquetes [`pip`](https://pip.pypa.io/en/stable/) instalado, pueden simplemente ejecutar el siguiente comando:
 
-Las personas que ya están familiarizadas con la instalación de paquetes de Python y con el administrador de paquetes [`pip`](https://pip.pypa.io/en/stable/) instalado, pueden simplemente ejecutar el siguiente comando:
+Robot Framework [`installation instructions`](https://github.com/robotframework/robotframework/blob/master/INSTALL.rst)
 
     pip install robotframework
 
-Robot Framework 3.0 y versiones posteriores admiten Python 3 además de Python 2. También
-este proyecto de demostración es actualmente compatible con Python 3.
+Selenium Library [`selenium library`](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html)
 
-## Iniciar Tests
+    pip install robotframework-seleniumlibrary
 
-Los casos de pruebas son ejecutados con el comando `robot`:
+DataDriver Library y Complemento [XLS] [`datadriver library`](https://github.com/Snooz82/robotframework-datadriver)
 
-    robot ("Nombre Archivo").robot
+    pip install robotframework-datadriver
+    pip install robotframework-datadriver[XLS]
 
-Nota: Si está utilizando Robot Framework 2.9 o una versión anterior, debe
-          use el comando específico del intérprete de Python `pybot`, `jybot` o
-          `ipybot` en su lugar.
+## Iniciar Ejecuciones de Tests con Archivo .bat
+La aplicación de demostración es una página con carrito de compra, con validaciones, 
+manejo de frames, tablas y escenarios, implementada con Python y Robot Framework, la cual se puede ejecutar directamente desde los 
+archivos [`RunTestCases.bat`](RunTestCases.bat) y [`RunTestSuite.bat`](RunTestSuite.bat).
 
-Para ejecutar todos los archivos de casos de prueba en un directorio de forma recursiva, simplemente, ingrese el
-directorio como argumento. También puede ingresar varios archivos o directorios en
-un argumento y usar varias opciones de línea de comando compatibles con Robot Framework.
+## Iniciar Ejecuciones de Tests por Comando
+Los casos de pruebas son ejecutados con el comando `robot` el cual será utilizado de dos maneras:
 
-Los resultados `disponibles en línea` se crearon usando el siguiente comando:
+Para ejecutar un caso de prueba en específico:
 
-    robot -d Results /Tests/TestCases.robot
+    robot -t Test Case 1  Test/TesCases.robot
 
-Ejecuta `robot --help` para mayor información sobre los comandos utilizados.
-[`Robot Framework User Guide`](http://robotframework.org/robotframework/#user-guide), para mayor información sobre ejecuciones de pruebas en general.
+Para ejecutar todos los casos de prueba de forma recursiva:
+
+Los resultados `disponibles en línea` se crearon utilizando el siguiente comando
+
+    robot -d Results TestSuite/TestSuite.robot
+
+Ejecuta `robot --help` para mayor información sobre los comandos utilizados o 
+[`Robot Framework User Guide`](http://robotframework.org/robotframework/#user-guide) para mayor información sobre ejecuciones de pruebas en general.
+
+## Reporteria de Resultados
+Después de la ejecución de pruebas, obtendrá un reporte y un log en formato HTML.
+
+- [`report.html`](Results/report.html)
+- [`log.html`](Results/log.html)
+
+En el directorio [`Evidencias`](Results/Evidencias) se encuentran todas las evidencias generadas durante las validaciones.
