@@ -52,6 +52,29 @@ Todos los casos de prueba interactúan con la biblioteca de elementos llamada
 La demo contiene el archivo [`Users.xlsx`](/TDD/Users.xlsx) en donde se almacenan todas las variables de casos de prueba previamente
 planificadas.
 
+### Escenario:
+*   Ingresar a sitio [automationpractice.com](http://automationpractice.com/index.php)
+*   Añadir al carrito de compra una blusa negra talla L
+*   Añadir al carrito un vestido de verano largo estampado, de talla S y cualquier color
+*   Proceder a realizar la compra
+*   Realizar login con credenciales obtenidas de un archivo externo a su elección (no importan las credenciales, basta que sea un email con estructura válida y contraseña)
+*   Crear una cuenta
+*   Continuar con la compra y llegar a orden completa
+*   Visitar historia de órdenes y descargar PDF
+*   Cerrar sesión
+
+### Validaciones:
+*   Sacar evidencia de cada producto añadido en carrito
+*   Validar los artículos en carrito sean “Blouse”, “Summer Dress”
+*   Evidencia de creación de la cuenta
+*   Evidencia de paso de Shipping
+*   Validar que costo de despacho sea $2.00
+*   Evidencia de costo final del carrito
+*   Evidencia de orden completa
+*   Evidencia de apartado “Order History” y validar estado de la compra “On backorder”
+*   Seleccionar color del vestido y blusa de forma aleatoria
+*   Seleccionar radio button de formulario crear cuenta, de forma aleatoria
+
 # Iniciar Demo Desafío Automatización
 
 ## Precondiciones
