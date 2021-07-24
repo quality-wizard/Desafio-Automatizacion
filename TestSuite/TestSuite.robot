@@ -14,7 +14,7 @@ Resource        ../Resources/POM/PaymentPage.robot
 # Configuraciones De Entorno
 Suite Setup      CommonFuncSitioDesafio.Comenzar Suite De Prueba
 Suite Teardown   CommonFuncSitioDesafio.Finalizar Suite De Prueba
-Test Template    TestTemplate
+Test Template    Run Data Driven Steps
 
 *** Variables ***
 
@@ -23,9 +23,10 @@ Escenario de Prueba Para Usuario ${email} con contraseña ${pass}
     [Documentation]
 
 *** Keywords ***
-Test Template
+Run Data Driven Steps
     [Arguments]  ${email}  ${Fname}  ${Lname}  ${pass}  ${day}  ${month}  ${year}  ${company}  ${address1}  ${address2}  ${city}  ${state}  ${postcode}  ${country}  ${other}  ${phone}  ${phoneM}  ${alias}
-    Test Scenario 1  ${email}  ${Fname}  ${Lname}  ${pass}  ${day}  ${month}  ${year}  ${company}  ${address1}  ${address2}  ${city}  ${state}  ${postcode}  ${country}  ${other}  ${phone}  ${phoneM}  ${alias}
+    @{ListExcelData}    Create List     ${email}  ${Fname}  ${Lname}  ${pass}  ${day}  ${month}  ${year}  ${company}  ${address1}  ${address2}  ${city}  ${state}  ${postcode}  ${country}  ${other}  ${phone}  ${phoneM}  ${alias}
+    Test Scenario 1     @{ListExcelData}
 
 Test Scenario 1
     [Documentation]     Este escenario valida la funcionalidad "Realizar login con TDD"
