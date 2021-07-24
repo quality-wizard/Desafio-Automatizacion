@@ -10,7 +10,6 @@ además se verificarán las validaciones definidas como criterios de aceptación
 Tabla de Contenido
 ==================
 * [Configuraciones](#Configuraciones)
-
 * [Scope de Automatización](#Scope-de-Automatización)
     * [Estrategia de Automatización](#Estrategia-de-Automatización)
     * [Librerías de Test](#Librerías-de-Test)
@@ -26,7 +25,7 @@ Tabla de Contenido
 # Configuraciones
 Para obtener la demo, puede `Descargar` y extraer el último 
 paquete de GitHub o verificar él `Código Fuente` directamente.
-Como resultado obtendrá el directorio [`DesafioAutomatizacion`](/) con los archivos correspondientes.
+Como resultado obtendrá el directorio `DesafioAutomatizacion`con los archivos correspondientes.
 
 # Scope de Automatización
 
