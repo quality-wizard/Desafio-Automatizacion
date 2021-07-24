@@ -29,6 +29,8 @@ Seleccionar Cuenta de Usuario y Acceder a Historial de Pedidos
     Capture Page Screenshot             ${HomePageScreenshotHistorial}
     Click Element                       ${HomePageElementPDF}
     Sleep                               2
+
+Salir de Sesión de Usuario
     Click Element                       ${HomePageElementLogOut}
 
 

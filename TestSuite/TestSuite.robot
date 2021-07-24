@@ -25,12 +25,11 @@ Escenario de Prueba Para Usuario ${email} con contraseña ${pass}
 *** Keywords ***
 Test Template
     [Arguments]  ${email}  ${Fname}  ${Lname}  ${pass}  ${day}  ${month}  ${year}  ${company}  ${address1}  ${address2}  ${city}  ${state}  ${postcode}  ${country}  ${other}  ${phone}  ${phoneM}  ${alias}
-    Test Scenario 1    ${email}  ${Fname}  ${Lname}  ${pass}  ${day}  ${month}  ${year}  ${company}  ${address1}  ${address2}  ${city}  ${state}  ${postcode}  ${country}  ${other}  ${phone}  ${phoneM}  ${alias}
+    Test Scenario 1  ${email}  ${Fname}  ${Lname}  ${pass}  ${day}  ${month}  ${year}  ${company}  ${address1}  ${address2}  ${city}  ${state}  ${postcode}  ${country}  ${other}  ${phone}  ${phoneM}  ${alias}
 
 Test Scenario 1
-    [Documentation]     Este caso de prueba valida la funcionalidad Historial de Pedidos
+    [Documentation]     Este escenario valida la funcionalidad "Realizar login con TDD"
     [Arguments]         ${email}  ${Fname}  ${Lname}  ${pass}  ${day}  ${month}  ${year}  ${company}  ${address1}  ${address2}  ${city}  ${state}  ${postcode}  ${country}  ${other}  ${phone}  ${phoneM}  ${alias}
-    Log                 ${email}
 
     HomePage.Seleccionar Producto Blusa Negra
     ProductPage.Seleccionar Talla y Color Blusa
@@ -45,11 +44,27 @@ Test Scenario 1
     SummaryPage.Validar Datos Footer
     SummaryPage.Validar Boton Checkout
 
-    SignInPage.Validar Vista Autenticación
-    SignInPage.Validar Vista Autenticación
     SignInPage.Acceder a Crear Cuenta                                       ${email}
     SignInPage.Validar e Ingresar Información Formulario Crear Cuenta       ${Fname}  ${Lname}  ${pass}  ${day}  ${month}  ${year}  ${company}  ${address1}  ${address2}  ${city}  ${state}  ${postcode}  ${country}  ${other}  ${phone}  ${phoneM}  ${alias}
     SignInPage.Validar Boton Agregar Cuenta
+
+    HomePage.Salir de Sesión de Usuario
+    CommonFuncSitioDesafio.Volver a Vista Home
+
+    HomePage.Seleccionar Producto Blusa Negra
+    ProductPage.Seleccionar Talla y Color Blusa
+    ProductPage.Continuar Con La Compra
+    HomePage.Validar Logo De Home Page
+
+    HomePage.Seleccionar Producto Vestido
+    ProductPage.Seleccionar Talla y Color Vestido
+    ProductPage.Ir a Carrito de Compras
+
+    SummaryPage.Validar Productos
+    SummaryPage.Validar Datos Footer
+    SummaryPage.Validar Boton Checkout
+
+    SignInPage.Ingresar Credenciales y Acceder Con Usuario Creado    ${email}    ${pass}
 
     AddressPage.Validar Vista Addresses
     AddressPage.Validar Boton ProceedToCheckout
@@ -71,6 +86,6 @@ Test Scenario 1
     CommonFuncSitioDesafio.Volver a Vista Home
 
     HomePage.Seleccionar Cuenta de Usuario y Acceder a Historial de Pedidos
-
+    HomePage.Salir de Sesión de Usuario
     CommonFuncSitioDesafio.Volver a Vista Home
 

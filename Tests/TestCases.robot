@@ -10,13 +10,12 @@ Resource        ../Resources/POM/AddressPage.robot
 Resource        ../Resources/POM/ShippingPage.robot
 Resource        ../Resources/POM/PaymentPage.robot
 
-
 # Configuraciones De Entorno
 Test Setup      CommonFuncSitioDesafio.Comenzar Test De Prueba
 Test Teardown   CommonFuncSitioDesafio.Finalizar Test De Prueba
 
 *** Variables ***
-${email}        prueba25@prueba25.com
+${email}        prueba36@prueba36.com
 ${Fname}        Elmer
 ${Lname}        M. Cornelius
 ${pass}         335353
@@ -43,14 +42,14 @@ Test Case 1
     HomePage.Validar Logo De Home Page
 
 Test Case 2
-    [Documentation]     Este caso de prueba valida la funcionalidad seleccionar talla y color del producto "Blusa"
+    [Documentation]     Este caso de prueba valida "Añadir al carrito de compra "Blusa" color aleatorio, talla L"
     [Tags]              Funcional
 
     HomePage.Seleccionar Producto Blusa Negra
     ProductPage.Seleccionar Talla y Color Blusa
 
 Test Case 3
-    [Documentation]     Este caso de prueba valida la funcionalidad continuar con la compra
+    [Documentation]     Este caso de prueba valida la funcionalidad "Continuar con la compra"
     [Tags]              Funcional
 
     HomePage.Seleccionar Producto Blusa Negra
@@ -59,14 +58,14 @@ Test Case 3
     HomePage.Validar Logo De Home Page
 
 Test Case 4
-    [Documentation]     Este caso de prueba valida la funcionalidad seleccionar talla y color del producto "Vestido"
+    [Documentation]     Este caso de prueba valida "Añadir al carrito de compra "Vestido" color aleatorio, talla S"
     [Tags]              Funcional
 
     HomePage.Seleccionar Producto Vestido
     ProductPage.Seleccionar Talla y Color Vestido
 
 Test Case 5
-    [Documentation]     Este caso de prueba valida la funcionalidad ir a carrito de compra
+    [Documentation]     Este caso de prueba valida la funcionalidad "Proceder a realizar la compra"
     [Tags]              Funcional
 
     HomePage.Seleccionar Producto Vestido
@@ -310,5 +309,7 @@ Test Case 13
     CommonFuncSitioDesafio.Volver a Vista Home
 
     HomePage.Seleccionar Cuenta de Usuario y Acceder a Historial de Pedidos
+    HomePage.Salir de Sesión de Usuario
+    CommonFuncSitioDesafio.Volver a Vista Home
 
 *** Keywords ***

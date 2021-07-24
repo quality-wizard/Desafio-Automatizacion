@@ -29,7 +29,7 @@ HomePageButtonSignIn = "xpath://span[normalize-space()='Sign in']"
 ProductPageFrame = "xpath://body/div/div/div/div/div/iframe[1]"
 ProductPageElementCarrito = "xpath://span[normalize-space()='Add to cart']"
 ProductPageElementFrameCompra = "xpath://div[@class='clearfix']"
-ProductPageButtonContinuarCompra = "xpath://span[@title='Continue shopping']//span[1]"
+ProductPageButtonContinuarCompra = "//span[@title='Continue shopping']//span[1]"
 ProductPageButtonCarritoCompra = "xpath://span[normalize-space()='Proceed to checkout']"
 
 ProductPageElementBlusaColor1 = "xpath://a[@id='color_8']"

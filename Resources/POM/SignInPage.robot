@@ -4,7 +4,7 @@ Library    Screenshot
 Variables   ../WebElements.py
 
 *** Variables ***
-
+@{RadioButton}                   ${SignInPageRadio1}  ${SignInPageRadio2}
 
 *** Keywords ***
 Validar Vista Autenticación
@@ -22,8 +22,8 @@ Validar e Ingresar Información Formulario Crear Cuenta
     Sleep                        3
     Page Should Contain          ${SignInPageElementVal2}
 # Validar Información Personal
-    Click Element                ${SignInPageRadio1}
-    Click Element                ${SignInPageRadio2}
+    ${SelradioButton}=           Evaluate                                random.choice(${radiobutton})  random
+    Click Element                ${SelradioButton}
     Input Text                   ${SignInPageInputFirstName}             ${Fname}
     Input Text                   ${SignInPageInputLastName}              ${Lname}
     Input Password               ${SignInPageInputPassword}              ${pass}
