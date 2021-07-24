@@ -15,6 +15,8 @@ Tabla de Contenido
     * [Estrategia de Automatización](#Estrategia-de-Automatización)
     * [Librerías de Test](#Librerías-de-Test)
     * [Casos de Prueba](#Casos-De-Prueba)
+        * [Escenario](#Escenario)
+        * [Validaciones](#Validaciones)
 * [Iniciar Demo Desafío Automatización](#Iniciar-Demo-Desafío-Automatización)
     * [Precondiciones](#Precondiciones)
     * [Iniciar Ejecuciones de Tests con Archivo .bat](#Iniciar-Ejecuciones-de-Tests-con-Archivo-.bat)
@@ -35,7 +37,7 @@ estáticos y otro para crear y ejecutar suite de pruebas con datos dinámicos ut
 [`TestCases.robot`](Tests/TestCases.robot)
     Crea y ejecuta casos de prueba con datos estáticos
 
-    El estilo basado en datos estaticos se puede utilizar durante la fase de construcción del script de automatización.
+    El estilo basado en datos estáticos se puede utilizar durante la fase de construcción del script de automatización.
 
 [`TestSuite.robot`](TestSuite/TestSuite.robot)
     Crea y ejecuta suite de pruebas con datos dinámicos utilizando TDD
@@ -52,7 +54,7 @@ Todos los casos de prueba interactúan con la biblioteca de elementos llamada
 La demo contiene el archivo [`Users.xlsx`](/TDD/Users.xlsx) en donde se almacenan todas las variables de casos de prueba previamente
 planificadas.
 
-### Escenario:
+### Escenario
 *   Ingresar a sitio [automationpractice.com](http://automationpractice.com/index.php)
 *   Añadir al carrito de compra una blusa negra talla L
 *   Añadir al carrito un vestido de verano largo estampado, de talla S y cualquier color
@@ -63,7 +65,7 @@ planificadas.
 *   Visitar historia de órdenes y descargar PDF
 *   Cerrar sesión
 
-### Validaciones:
+### Validaciones
 *   Sacar evidencia de cada producto añadido en carrito
 *   Validar los artículos en carrito sean “Blouse”, “Summer Dress”
 *   Evidencia de creación de la cuenta
