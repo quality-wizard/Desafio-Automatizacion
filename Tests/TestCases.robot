@@ -330,8 +330,8 @@ Test Case 14
     SummaryPage.Validar Boton Checkout
 
     SignInPage.Validar Vista Autenticación
-    SignInPage.Acceder a Crear Cuenta                                       ${email}
-    SignInPage.Validar Cuenta Creada    ${email}    ${pass}
+    SignInPage.Acceder a Crear Cuenta           ${email}
+    SignInPage.Validar Cuenta Creada            ${email}    ${pass}
 #    SignInPage.Validar e Ingresar Información Formulario Crear Cuenta       ${Fname}  ${Lname}  ${pass}  ${day}  ${month}  ${year}  ${company}  ${address1}  ${address2}  ${city}  ${state}  ${postcode}  ${country}  ${other}  ${phone}  ${phoneM}  ${alias}
 #    SignInPage.Validar Boton Agregar Cuenta
 

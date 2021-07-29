@@ -14,7 +14,7 @@ Validar Vista Autenticación
 Validar Cuenta Creada
     [Arguments]                  ${email}   ${pass}
     Sleep                        2
-    ${Valcuenta}=                Page Should Contain
+    ${Valcuenta}=                Get Text    xpath://li[contains(text(),'An account using this email address has already be')]
     Sleep                        1
     Run Keyword If               ${Valcuenta} == 'An account using this email address has already been registered. Please enter a valid password or request a new one.'     Ingresar Credenciales y Acceder Con Usuario Creado      ${email}    ${pass}
     ...                          ELSE           Acceder a Crear Cuenta  ${email}

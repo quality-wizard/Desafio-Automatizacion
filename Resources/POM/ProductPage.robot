@@ -19,7 +19,7 @@ Seleccionar Talla y Color Blusa
     Capture Page Screenshot                 ${ProductPageScreenshotProducto1}
     Click Element                           ${ProductPageElementCarrito}
     Unselect Frame
-    Sleep                                   2
+    Sleep                                   3
 
 Seleccionar Talla y Color Vestido
     Sleep                                   2
@@ -31,16 +31,18 @@ Seleccionar Talla y Color Vestido
     Capture Page Screenshot                 ${ProductPageScreenshotProducto2}
     Click Element                           ${ProductPageElementCarrito}
     Unselect Frame
-    Sleep                                   2
+    Sleep                                   3
 
 Continuar Con La Compra
     Wait Until Page Contains Element        ${ProductPageElementFrameCompra}
-    Sleep                                   3
+    Wait Until Page Contains Element        ${ProductPageButtonContinuarCompra}
+    Sleep                                   2
     Click Element                           ${ProductPageButtonContinuarCompra}
 
 Ir a Carrito de Compras
     Wait Until Page Contains Element        ${ProductPageElementFrameCompra}
-    Sleep                                   3
+    Wait Until Page Contains Element        ${ProductPageButtonCarritoCompra}
+    Sleep                                   2
     Click Element                           ${ProductPageButtonCarritoCompra}
 
     
