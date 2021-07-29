@@ -1,6 +1,6 @@
 *** Settings ***
 Library     SeleniumLibrary
-Library    Screenshot
+Library     Screenshot
 Variables   ../WebElements.py
 
 *** Variables ***
@@ -10,6 +10,14 @@ Variables   ../WebElements.py
 Validar Vista Autenticación
     Sleep                        2
     Page Should Contain          ${SignInPageElementVal1}
+
+Validar Cuenta Creada
+    [Arguments]                  ${email}   ${pass}
+    Sleep                        2
+    ${Valcuenta}=                Page Should Contain
+    Sleep                        1
+    Run Keyword If               ${Valcuenta} == 'An account using this email address has already been registered. Please enter a valid password or request a new one.'     Ingresar Credenciales y Acceder Con Usuario Creado      ${email}    ${pass}
+    ...                          ELSE           Acceder a Crear Cuenta  ${email}
 
 Acceder a Crear Cuenta
     [Arguments]                  ${email}

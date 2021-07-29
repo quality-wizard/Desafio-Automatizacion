@@ -15,10 +15,10 @@ Test Setup      CommonFuncSitioDesafio.Comenzar Test De Prueba
 Test Teardown   CommonFuncSitioDesafio.Finalizar Test De Prueba
 
 *** Variables ***
-${email}        prueba36@prueba36.com
+${email}        testemail02@test.com
 ${Fname}        Elmer
 ${Lname}        M. Cornelius
-${pass}         335353
+${pass}         123456
 ${day}          18
 ${month}        7
 ${year}         1991
@@ -187,11 +187,11 @@ Test Case 10
     ShippingPage.Validar Vista Shipping
     ShippingPage.Validar Check IAgree
     ShippingPage.Validar Botón ProcedToCheckOut
-# Vista
+ # Vista
     PaymentPage.Validar Vista Pago
-# Tabla
+ # Tabla
     PaymentPage.Validar Datos Tabla
-# M. Pago
+ # M. Pago
     PaymentPage.Validar Botón Pago Tarjeta Bancaria
 
 Test Case 11
@@ -220,11 +220,11 @@ Test Case 11
     ShippingPage.Validar Vista Shipping
     ShippingPage.Validar Check IAgree
     ShippingPage.Validar Botón ProcedToCheckOut
-# Vista
+ # Vista
     PaymentPage.Validar Vista Pago
-# Tabla
+ # Tabla
     PaymentPage.Validar Datos Tabla
-# M. Pago
+ # M. Pago
     PaymentPage.Validar Botón Pago Tarjeta Bancaria
 
     PaymentPage.Validar Vista Resumen de Orden
@@ -256,11 +256,11 @@ Test Case 12
     ShippingPage.Validar Vista Shipping
     ShippingPage.Validar Check IAgree
     ShippingPage.Validar Botón ProcedToCheckOut
-# Vista
+ # Vista
     PaymentPage.Validar Vista Pago
-# Tabla
+ # Tabla
     PaymentPage.Validar Datos Tabla
-# M. Pago
+ # M. Pago
     PaymentPage.Validar Botón Pago Tarjeta Bancaria
 
     PaymentPage.Validar Vista Resumen de Orden
@@ -295,11 +295,11 @@ Test Case 13
     ShippingPage.Validar Vista Shipping
     ShippingPage.Validar Check IAgree
     ShippingPage.Validar Botón ProcedToCheckOut
-# Vista
+ # Vista
     PaymentPage.Validar Vista Pago
-# Tabla
+ # Tabla
     PaymentPage.Validar Datos Tabla
-# M. Pago
+ # M. Pago
     PaymentPage.Validar Botón Pago Tarjeta Bancaria
 
     PaymentPage.Validar Vista Resumen de Orden
@@ -311,5 +311,28 @@ Test Case 13
     HomePage.Seleccionar Cuenta de Usuario y Acceder a Historial de Pedidos
     HomePage.Salir de Sesión de Usuario
     CommonFuncSitioDesafio.Volver a Vista Home
+
+Test Case 14
+    [Documentation]     Este caso de prueba valida un loop en la vista de sign in
+    [Tags]              Prueba
+
+    HomePage.Seleccionar Producto Blusa Negra
+    ProductPage.Seleccionar Talla y Color Blusa
+    ProductPage.Continuar Con La Compra
+    HomePage.Validar Logo De Home Page
+
+    HomePage.Seleccionar Producto Vestido
+    ProductPage.Seleccionar Talla y Color Vestido
+    ProductPage.Ir a Carrito de Compras
+
+    SummaryPage.Validar Productos
+    SummaryPage.Validar Datos Footer
+    SummaryPage.Validar Boton Checkout
+
+    SignInPage.Validar Vista Autenticación
+    SignInPage.Acceder a Crear Cuenta                                       ${email}
+    SignInPage.Validar Cuenta Creada    ${email}    ${pass}
+#    SignInPage.Validar e Ingresar Información Formulario Crear Cuenta       ${Fname}  ${Lname}  ${pass}  ${day}  ${month}  ${year}  ${company}  ${address1}  ${address2}  ${city}  ${state}  ${postcode}  ${country}  ${other}  ${phone}  ${phoneM}  ${alias}
+#    SignInPage.Validar Boton Agregar Cuenta
 
 *** Keywords ***
