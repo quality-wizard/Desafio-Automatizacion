@@ -13,17 +13,18 @@ Validar Vista Autenticación
 
 Validar Cuenta Creada
     [Arguments]                  ${email}   ${pass}
+    Wait Until Page Contains Element          xpath://div[@id='create_account_error']/ol/li
+    Sleep                        3
+    ${Valcuenta}=                Get Text    xpath://div[@id='create_account_error']/ol/li
     Sleep                        2
-    ${Valcuenta}=                Get Text    xpath://li[contains(text(),'An account using this email address has already be')]
-    Sleep                        1
-    Run Keyword If               ${Valcuenta} == 'An account using this email address has already been registered. Please enter a valid password or request a new one.'     Ingresar Credenciales y Acceder Con Usuario Creado      ${email}    ${pass}
+    Run Keyword If               '${Valcuenta}' == 'An account using this email address has already been registered. Please enter a valid password or request a new one.'     Ingresar Credenciales y Acceder Con Usuario Creado      ${email}    ${pass}
     ...                          ELSE           Acceder a Crear Cuenta  ${email}
 
 Acceder a Crear Cuenta
     [Arguments]                  ${email}
     Input Text                   ${SignInPageInputEmail}                 ${email}
     Click Element                ${SignInPageButtonCreateAccount}
-    Sleep                        1
+    Sleep                        3
     
 Validar e Ingresar Información Formulario Crear Cuenta
     [Arguments]                  ${Fname}  ${Lname}  ${pass}  ${day}  ${month}  ${year}  ${company}  ${address1}  ${address2}  ${city}  ${state}  ${postcode}  ${country}  ${other}  ${phone}  ${phoneM}  ${alias}
