@@ -12,13 +12,15 @@ Validar Vista Autenticación
     Page Should Contain          ${SignInPageElementVal1}
 
 Validar Cuenta Creada
-    [Arguments]                  ${email}   ${pass}
-    Wait Until Page Contains Element          xpath://div[@id='create_account_error']/ol/li
-    Sleep                        3
-    ${Valcuenta}=                Get Text    xpath://div[@id='create_account_error']/ol/li
+    [Arguments]                  ${email}  ${pass}  ${Fname}  ${Lname}  ${pass}  ${day}  ${month}  ${year}  ${company}  ${address1}  ${address2}  ${city}  ${state}  ${postcode}  ${country}  ${other}  ${phone}  ${phoneM}  ${alias}
     Sleep                        2
-    Run Keyword If               '${Valcuenta}' == 'An account using this email address has already been registered. Please enter a valid password or request a new one.'     Ingresar Credenciales y Acceder Con Usuario Creado      ${email}    ${pass}
-    ...                          ELSE           Acceder a Crear Cuenta  ${email}
+    ${Valcrearcuenta}=           Get Text    ${SignInPageElementVal5}
+    Run Keyword If               '${Valcrearcuenta}' == '${SignInPageElementVal2}'  Crear Cuenta  ${Fname}  ${Lname}  ${pass}  ${day}  ${month}  ${year}  ${company}  ${address1}  ${address2}  ${city}  ${state}  ${postcode}  ${country}  ${other}  ${phone}  ${phoneM}  ${alias}  ELSE  Ingresar Credenciales y Acceder Con Usuario Creado  ${email}  ${pass}
+
+Crear Cuenta
+    [Arguments]                  ${Fname}  ${Lname}  ${pass}  ${day}  ${month}  ${year}  ${company}  ${address1}  ${address2}  ${city}  ${state}  ${postcode}  ${country}  ${other}  ${phone}  ${phoneM}  ${alias}
+    Validar e Ingresar Información Formulario Crear Cuenta  ${Fname}  ${Lname}  ${pass}  ${day}  ${month}  ${year}  ${company}  ${address1}  ${address2}  ${city}  ${state}  ${postcode}  ${country}  ${other}  ${phone}  ${phoneM}  ${alias}
+    Validar Boton Agregar Cuenta
 
 Acceder a Crear Cuenta
     [Arguments]                  ${email}
@@ -29,7 +31,6 @@ Acceder a Crear Cuenta
 Validar e Ingresar Información Formulario Crear Cuenta
     [Arguments]                  ${Fname}  ${Lname}  ${pass}  ${day}  ${month}  ${year}  ${company}  ${address1}  ${address2}  ${city}  ${state}  ${postcode}  ${country}  ${other}  ${phone}  ${phoneM}  ${alias}
     Sleep                        3
-    Page Should Contain          ${SignInPageElementVal2}
 # Validar Información Personal
     ${SelradioButton}=           Evaluate                                random.choice(${radiobutton})  random
     Click Element                ${SelradioButton}

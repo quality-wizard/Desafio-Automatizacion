@@ -59,7 +59,7 @@ SummaryPageButton = "xpath://a[@class='button btn btn-default standard-checkout 
 
 # SigIn Page Locators
 SignInPageElementVal1 = "Authentication"
-SignInPageElementVal2 = "Create an account"
+SignInPageElementVal2 = "CREATE AN ACCOUNT"
 
 SignInPageInputEmail = "xpath://input[@id='email_create']"
 SignInPageButtonCreateAccount = "xpath://span[normalize-space()='Create an account']"
@@ -88,6 +88,11 @@ SignInPageInputPhone = "xpath://input[@name='phone']"
 SignInPageInputPhoneMobile = "xpath://input[@name='phone_mobile']"
 SignInPageInputAlias = "xpath://input[@name='alias']"
 SignInPageScreenshotDatos2 = "Evidencias/Cuenta-Nueva-2.png"
+
+SignInPageElementVal3 = "xpath://div[@id='create_account_error']/ol/li"
+SignInPageElementVal4 = "An account using this email address has already been registered. Please enter a valid password" \
+                        " or request a new one."
+SignInPageElementVal5 = "xpath://h1[@class='page-heading']"
 
 SignInPageButtonRegister = "xpath://span[normalize-space()='Register']"
 
